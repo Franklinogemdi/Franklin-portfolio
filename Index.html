@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franklin's Portfolio</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: lightblue;
+            text-align: center;
+            scroll-behavior: smooth;
+            transition: background-color 0.5s, color 0.5s;
+            padding-top: 80px;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: darkblue;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 15px;
+            font-weight: bold;
+        }
+
+        .card {
+            background: white;
+            width: 85%;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 15px;
+            box-shadow: 0 4px 10px gray;
+        }
+.project {
+    background-color: lightgray;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px gray;
+}
+
+.project h3 {
+    color: darkblue;
+}
+
+.project p {
+    font-size: 16px;
+}
+.project-btn {
+    display: inline-block;
+    background-color: blue;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.project-btn:hover {
+    background-color: darkblue;
+}
+        .card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 20px gray;
+        }
+
+        button {
+            background: blue;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 8px;
+        }
+        img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid darkblue;
+    object-fit: cover;
+    margin: 15px 0;
+}
+
+        input,
+        textarea {
+            width: 90%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 2px solid blue;
+            font-size: 16px;
+        }
+
+        .dark-mode {
+            background-color: #222;
+            color: white;
+        }
+        .dark-mode .card {
+    background-color: #333;
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: black;
+}
+
+.dark-mode footer {
+    background-color: black;
+}
+
+.dark-mode input,
+.dark-mode textarea {
+    background-color: #555;
+    color: white;
+    border: 2px solid white;
+}
+
+        footer {
+            background: darkblue;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+  @media (max-width: 600px) {
+    nav {
+        padding: 10px;
+    }
+
+    nav a {
+        display: inline-block;
+        margin: 5px;
+        font-size: 14px;
+    }
+
+    .card {
+        width: 85%;
+        padding: 15px;
+    }
+
+    input,
+    textarea {
+        width: 90%;
+        box-sizing: border-box;
+    }
+
+    button {
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+}
+    </style>
+</head>
+<body>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<div class="card" id="home">
+    <h1>Franklin's Portfolio</h1>
+    <img src="profile.jpg" alt="Franklin's Profile Picture" width="150" height="150">
+
+    <p>I am a web developer.</p>
+    <p>I am learning web development on my phone.</p>
+
+    <a href="Franklin_CV.pdf" download>
+    <button>Download CV</button>
+</a><br><br>
+
+    <a href="https://github.com/yourusername" target="_blank">
+    <button>GitHub</button>
+</a>
+    <button>LinkedIn</button><br>
+
+    <button>Email</button>
+
+    <h2>My Skills</h2>
+
+    <ul style="display:inline-block; text-align:left;">
+        <li>HTML</li>
+        <li>CSS (Learning)</li>
+        <li>JavaScript (Learning)</li>
+    </ul>
+
+    <h2>Say Hello</h2>
+
+    <input type="text" id="nameInput" placeholder="Enter your name"><br><br>
+
+    <button id="myButton" onclick="showName()">Say Hello</button>
+
+    <button onclick="clearMessage()">Clear</button><br>
+
+    <button id="darkButton" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
+    <p id="message"></p>
+    <p id="date"></p>
+</div>
+
+<div class="card" id="about">
+    <h2>About Me</h2>
+    <p>
+        Hello! My name is Franklin. I am learning web development with my phone.
+        My goal is to become a professional web developer and freelancer.
+    </p>
+</div>
+<div class="card" id="projects">
+    <h2>My Projects</h2>
+
+    <div class="project">
+        <h3>Portfolio Website</h3>
+        <p>This is my first portfolio website built with HTML, CSS, and JavaScript.</p>
+<a href="Project.html" class="project-btn">View Project</a>
+    </div>
+
+    <div class="project">
+        <h3>Coming Soon...</h3>
+        <p>More projects will be added here as I continue learning.</p>
+    </div>
+
+</div>
+<div class="card" id="contact">
+    <h2>Contact Me</h2>
+
+    <input type="text" id="contactName" placeholder="Your Name"><br><br>
+
+    <input type="email" id="contactEmail" placeholder="Your Email"><br><br>
+
+    <textarea id="contactMessageBox" placeholder="Your Message"></textarea><br><br>
+
+    <button onclick="sendMessage()">Send Message</button>
+
+    <p id="result"></p>
+
+</div>
+<footer>
+    <p>© 2026 Franklin's Portfolio. All Rights Reserved.</p>
+</footer>
+<script>
+function showName() {
+    let name = document.getElementById("nameInput").value;
+    let message = document.getElementById("message");
+
+    if (name === "") {
+        message.innerHTML = "Please enter your name.";
+        return;
+    }
+
+    message.innerHTML = "Hello, " + name + "! Welcome to my website.";
+let today = new Date();
+
+document.getElementById("date").innerHTML =
+"Today is: " + today.toDateString() +
+"<br><br>Time: " + today.toLocaleTimeString();
+
+    let button = document.getElementById("myButton");
+    button.innerHTML = "Thank You!";
+    button.style.backgroundColor = "green";
+}
+
+function clearMessage() {
+    document.getElementById("nameInput").value = "";
+    document.getElementById("message").innerHTML = "";
+    document.getElementById("date").innerHTML = "";
+
+    let button = document.getElementById("myButton");
+    button.innerHTML = "Say Hello";
+    button.style.backgroundColor = "blue";
+}
+
+function toggleDarkMode() {
+    document.body.classList.toggle("dark-mode");
+
+    let button = document.getElementById("darkButton");
+
+    if (document.body.classList.contains("dark-mode")) {
+        button.innerHTML = "☀️ Light Mode";
+    } else {
+        button.innerHTML = "🌙 Dark Mode";
+    }
+}
+
+function sendMessage() {
+    let name = document.getElementById("contactName").value;
+    let email = document.getElementById("contactEmail").value;
+    let messageBox = document.getElementById("contactMessageBox");
+    let result = document.getElementById("result");
+
+    if (name === "" || email === "" || messageBox.value === "") {
+        result.innerHTML = "Please fill all the boxes.";
+        result.style.color = "red";
+    } else {
+        result.innerHTML = "Thank you, " + name + "! Your message has been received.";
+        result.style.color = "green";
+
+        document.getElementById("contactName").value = "";
+        document.getElementById("contactEmail").value = "";
+        messageBox.value = "";
+    }
+}
+
+</script>
+
+</body>
+</html>
