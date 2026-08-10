@@ -13,14 +13,23 @@
             padding: 30px;
         }
 
-        .project-card {
-            background-color: white;
-            width: 85%;
-            margin: 30px auto;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 10px gray;
+.project-card {
+    background-color: white;
+    width: 85%;
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px gray;
+    line-height: 1.6;
+
         }
+        footer {
+    margin-top: 40px;
+    padding: 20px;
+    color: #555;
+    font-size: 14px;
+}
 
         button {
             background-color: blue;
@@ -41,14 +50,22 @@
 <body>
 
     <div class="project-card">
-  <h1>My Portfolio Website</h1>
+  <h1>My Portfolio Website 🚀</h1>
 
 <p>
-    This is my first portfolio website built with
-    HTML, CSS, and JavaScript.
+    <strong>My first web development project</strong>
+</p>
+
+<p>
+    This is my first portfolio website, built with HTML,
+    CSS, and JavaScript as I learn web development.
 </p>
 
 <h2>About This Project</h2>
+
+<p>
+    My goal is to become a professional web developer and build useful websites.
+</p>
 
 <p>
     I created this website to showcase my skills,
@@ -57,27 +74,52 @@
 
 <h2>Features</h2>
 
-<p>✅ Responsive design for phones</p>
-<p>✅ Dark mode</p>
-<p>✅ Contact form</p>
-<p>✅ JavaScript interactions</p>
-<p>✅ Project section</p>
+<ul style="text-align: left; display: inline-block;">
+    <li>✅ Responsive design for phones</li>
+    <li>✅ Dark mode</li>
+    <li>✅ Contact form</li>
+    <li>✅ JavaScript interactions</li>
+    <li>✅ Project section</li>
+</ul>
+<h2>Project Progress</h2>
 
+<p>
+    This project is part of my journey in learning web development.
+    I am continuously improving the design, functionality, and user experience.
+</p>
         <h2>What I Used</h2>
 
-        <p>HTML</p>
-        <p>CSS</p>
-        <p>JavaScript</p>
+<ul style="text-align: left; display: inline-block;">
+    <li>HTML</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Python</li>
+</ul>
 
         <br>
 
-        <button onclick="goBack()">← Back to Portfolio</button>
-    </div>
+<button onclick="goBack()">← Back to Portfolio</button>
 
+<br><br>
+
+<button onclick="viewProject()">View Live Portfolio</button>
+<br><br>
+
+<button onclick="viewGitHub()">View My GitHub</button>
+    </div>
+<footer>
+    <p>© 2026 Franklin's Portfolio. All rights reserved.</p>
+</footer>
     <script>
         function goBack() {
             window.location.href = "index.html";
         }
+        function viewProject() {
+    window.location.href = "index.html";
+}
+function viewGitHub() {
+    window.location.href = "https://github.com/Franklinogemdi";
+}
     </script>
 
 </body>
