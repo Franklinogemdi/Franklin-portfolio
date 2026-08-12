@@ -24,6 +24,22 @@
     line-height: 1.6;
 
         }
+        .project-item {
+    background-color: #f5f5f5;
+    margin: 20px 0;
+    padding: 20px;
+    border-radius: 12px;
+}
+.project-image {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 10px 0;
+}
+
+.project-item h3 {
+    margin-top: 0;
+}
         footer {
     margin-top: 40px;
     padding: 20px;
@@ -83,30 +99,52 @@
 </ul>
 <h2>My Projects 🚀</h2>
 
-<p>
-    <strong>🧮 JavaScript Calculator</strong>
-</p>
-<button onclick="window.location.href='calculator.html'">
-    View Calculator
-</button>
+<div class="project-item">
+    <h3>🧮 JavaScript Calculator</h3>
+    <img src="calculator.png" alt="JavaScript Calculator" class="project-image">
+
+    <p>
+        A simple calculator built with HTML, CSS, and JavaScript.
+        It performs basic mathematical calculations and includes
+        clear and backspace functions.
+    </p>
+
+    <button onclick="window.location.href='calculator.html'">
+        View Calculator
+    </button>
+</div>
 
 <br><br>
 
-<p>
-    <strong>📝 To-Do List</strong>
-</p>
-<button onclick="window.location.href='todo.html'">
-    View To-Do List
-</button>
+<div class="project-item">
+    <h3>📝 To-Do List</h3>
+    <img src="todo.png" alt="To-Do List" class="project-image">
+
+    <p>
+        A simple To-Do List built with HTML, CSS, and JavaScript.
+        It allows users to add and delete tasks easily.
+    </p>
+
+    <button onclick="window.location.href='todo.html'">
+        View To-Do List
+    </button>
+</div>
 
 <br><br>
 
-<p>
-    <strong>🧠 JavaScript Quiz</strong>
-</p>
-<button onclick="window.location.href='quiz.html'">
-    Take Quiz
-</button>
+<div class="project-item">
+    <h3>🧠 JavaScript Quiz</h3>
+    <img src="quiz.png" alt="JavaScript Quiz" class="project-image">
+
+    <p>
+        An interactive quiz built with HTML, CSS, and JavaScript.
+        It tests your knowledge and keeps track of your score.
+    </p>
+
+    <button onclick="window.location.href='quiz.html'">
+        Take Quiz
+    </button>
+</div>
 
 <br><br>
 
