@@ -118,11 +118,18 @@
         border: 2px solid blue;
         font-size: 16px;
         box-sizing: border-box;
+        transition: 0.3s;
     }
 
     textarea {
         min-height: 120px;
     }
+        input:focus,
+textarea:focus {
+    outline: none;
+    border-color: darkblue;
+    box-shadow: 0 0 8px lightblue;
+}
         .skills-intro {
     margin-bottom: 20px;
     font-size: 16px;
@@ -524,9 +531,9 @@
 <!-- CONTACT -->
 <div class="card" id="contact">
 
-    <h2>Contact Me</h2>
+    <h2>📩 Contact Me</h2>
     <p>
-    Have a question or want to work with me? Send me a message below.
+    Have a question or want to work with me? Feel free to send me a message below.
     </p>
 
     <label for="contactName"><strong>Your Name</strong></label>
@@ -547,7 +554,7 @@
 
     <br><br>
 
-    <button onclick="sendMessage()">Send Message</button>
+    <button onclick="sendMessage()">📩 Send Message</button>
 
     <p id="result"></p>
 
