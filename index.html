@@ -196,6 +196,16 @@ textarea:focus {
         width: 50%;
     }
 }
+        #projects {
+    text-align: center;
+}
+
+#projects .project {
+    display: inline-block;
+    vertical-align: top;
+    width: 42%;
+    box-sizing: border-box;
+}
 
     /* Projects */
     .project {
@@ -266,6 +276,9 @@ textarea:focus {
         background-color: darkblue;
         transform: scale(1.05);
     }
+    .project {
+    text-align: center;
+    }   
 
     /* Dark Mode */
     .dark-mode {
@@ -314,7 +327,14 @@ textarea:focus {
         nav {
             padding: 8px;
         }
-
+        
+#projects .project {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-left: 0;
+    margin-right: 0;
+}
     nav a {
     display: inline-block;
     margin: 4px;
@@ -437,6 +457,10 @@ textarea:focus {
 <div class="card" id="projects">
 
     <h2>My Projects 🚀</h2>
+    <p>
+    Here are some of the projects I have built while learning
+    HTML, CSS, and JavaScript.
+    </p>
 
     <div class="project">
 
@@ -556,7 +580,7 @@ textarea:focus {
 
     <button onclick="sendMessage()">📩 Send Message</button>
 
-    <p id="result"></p>
+    <p id="result" style="display: none;"></p>
 
 </div>
 
@@ -640,10 +664,11 @@ textarea:focus {
         } else {
 
             result.innerHTML =
-                "Thank you, " + name +
-                "! Your message has been received.";
+    "✅ Thank you, " + name +
+    "! Your message has been received successfully.";
 
-            result.style.color = "green";
+result.style.color = "green";
+result.style.display = "block";
 
             document.getElementById("contactName").value = "";
             document.getElementById("contactEmail").value = "";
