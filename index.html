@@ -105,6 +105,10 @@
         opacity: 0.9;
         box-shadow: 0 6px 15px gray;
     }
+        label {
+    display: inline-block;
+    margin-bottom: 6px;
+        }
 
     input,
     textarea {
@@ -407,6 +411,10 @@
         Hello! My name is Franklin. I am learning web development with my phone.
         My goal is to become a professional web developer and freelancer.
     </p>
+    <p>
+    I enjoy building interactive websites and improving my skills through
+    practical projects. I am currently focusing on HTML, CSS, and JavaScript.
+    </p>
 
 </div>
 
@@ -509,16 +517,25 @@
 <div class="card" id="contact">
 
     <h2>Contact Me</h2>
+    <p>
+    Have a question or want to work with me? Send me a message below.
+    </p>
 
-    <input type="text" id="contactName" placeholder="Your Name">
+    <label for="contactName"><strong>Your Name</strong></label>
+<br>
+<input type="text" id="contactName" placeholder="Enter your name">
 
     <br><br>
 
-    <input type="email" id="contactEmail" placeholder="Your Email">
+    <label for="contactEmail"><strong>Your Email</strong></label>
+<br>
+<input type="email" id="contactEmail" placeholder="Enter your email">
 
     <br><br>
 
-    <textarea id="contactMessageBox" placeholder="Your Message"></textarea>
+    <label for="contactMessageBox"><strong>Your Message</strong></label>
+<br>
+<textarea id="contactMessageBox" placeholder="Write your message"></textarea>
 
     <br><br>
 
