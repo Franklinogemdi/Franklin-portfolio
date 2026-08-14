@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Frank's Barbershop | Professional Grooming</title>
+
+    <style>
+    html {
+    scroll-behavior: smooth;
+}
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+            color: #222;
+        }
+
+        nav {
+            background-color: #222;
+            padding: 15px;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 12px;
+            font-weight: bold;
+            transition: opacity 0.2s ease;
+        }
+
+        nav a:hover {
+            opacity: 0.7;
+        }
+
+        section {
+            padding: 70px 20px;
+            text-align: center;
+        }
+
+        section h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        section p {
+            max-width: 700px;
+            margin: 10px auto;
+            line-height: 1.6;
+        }
+
+        #home {
+            background-color: #f2f6ff;
+            padding-top: 120px;
+            min-height: 70vh;
+        }
+
+        #home h1 {
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        #home h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+        #home p {
+            font-size: 18px;
+            margin-bottom: 25px;
+        }
+
+        #home button {
+    background-color: #222;
+    color: white;
+    padding: 14px 30px;
+    border: none;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+        #home button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+        #about {
+            background-color: #f5f5f5;
+            border-top: 1px solid #ddd;
+            border-bottom: 1px solid #ddd;
+        }
+
+        #about p {
+            font-size: 17px;
+        }
+
+        #services {
+            background-color: #ffffff;
+        }
+
+        #services div {
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 25px;
+            border-radius: 12px;
+            background-color: #f2f2f2;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        #services div:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+        }
+
+        #services div h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+        }
+
+        #contact {
+    background-color: #f5f5f5;
+    border-top: 1px solid #ddd;
+}
+
+#contact input,
+#contact textarea,
+#contact select {
+            display: block;
+            width: 90%;
+            max-width: 500px;
+            margin: 12px auto;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            outline: none;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+        }
+
+        #contact textarea {
+            height: 130px;
+        }
+
+#contact input:focus,
+#contact textarea:focus,
+#contact select:focus {
+            border-color: #222;
+        }
+
+      #contact button {
+    background-color: #222;
+    color: white;
+    font-weight: bold;
+    padding: 14px 28px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+      #contact button:hover {
+    opacity: 0.85;
+    transform: translateY(-2px);
+}
+
+        #result {
+            font-weight: bold;
+            margin-top: 15px;
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+      footer h3 {
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+footer p {
+    margin: 8px 0;
+    font-size: 14px;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+        @media (max-width: 600px) {
+
+    nav a {
+        display: inline-block;
+        margin: 6px 8px;
+        padding: 6px 2px;
+    }
+
+            section {
+                padding: 50px 15px;
+            }
+
+            section h2 {
+                font-size: 26px;
+            }
+
+            #home {
+                padding-top: 80px;
+            }
+
+            #home h1 {
+                font-size: 34px;
+            }
+#home button {
+    width: 90%;
+    max-width: 300px;
+}
+            #services div {
+                width: 90%;
+                box-sizing: border-box;
+            }
+        }
+        #services > div {
+    background: white;
+    padding: 20px;
+    margin: 15px auto;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+}
+#services strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+#services > div:hover {
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+#why-us {
+    text-align: center;
+}
+
+#why-us p {
+    max-width: 500px;
+    margin: 12px auto;
+    padding: 15px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#why-us p:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+#contact label {
+    display: block;
+    max-width: 500px;
+    width: 90%;
+    margin: 15px auto 5px;
+    text-align: left;
+    font-weight: bold;
+}
+#contact input,
+#contact select,
+#contact textarea {
+    background-color: #ffffff;
+}
+#contact h2 {
+    margin-bottom: 10px;
+}
+
+#contact > p {
+    margin-bottom: 25px;
+}
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+<section id="home">
+
+<h1>Look Sharp. Feel Confident. 💈</h1>
+
+<h3>Professional Haircuts & Grooming Services</h3>
+
+<p>Fresh cuts. Clean style. Confidence every day.</p>
+
+<p>
+    Get a fresh, professional look with quality haircuts,
+    styling, and grooming services for men and boys.
+</p>
+
+<button onclick="document.getElementById('contact').scrollIntoView()">
+    📅 Book an Appointment
+</button>
+
+</section>
+
+
+        <section id="about">
+
+    <h2>About Our Barbershop</h2>
+
+<h3>Quality Grooming. Professional Service.</h3>
+
+  <p>
+    Frank's Barbershop provides quality haircuts and grooming
+    services in a clean, comfortable, and friendly environment.
+</p>
+
+<p>
+    Our goal is to make every customer leave looking sharp
+    and feeling confident.
+</p>
+<p>
+    We take pride in delivering great service and helping every
+    customer find a style that suits them.
+</p>
+
+  <p>
+    At Frank's Barbershop, we are dedicated to providing
+    excellent haircuts and grooming services that keep you
+    looking sharp and feeling confident.
+</p>
+
+</section>
+
+  <section id="services">
+
+    <h2>Our Services & Prices</h2>
+
+    <p>
+        Choose a service that suits you and enjoy professional grooming
+        at Frank's Barbershop.
+    </p>
+
+    <div>
+        <h3>💈 Haircuts</h3>
+        <p>
+            Clean and professional haircuts tailored to your style.
+        </p>
+        <strong>Price: ₦5,000</strong>
+    </div>
+
+    <div>
+        <h3>✂️ Hair Styling</h3>
+        <p>
+            Stylish cuts and grooming to help you look your best.
+        </p>
+        <strong>Price: ₦4,000</strong>
+    </div>
+
+    <div>
+        <h3>🧔 Grooming</h3>
+        <p>
+            Professional grooming services for a fresh and confident look.
+        </p>
+        <strong>Price: ₦3,000</strong>
+    </div>
+
+    <div>
+        <h3>🪒 Beard Trim</h3>
+        <p>
+            Neat and professional beard trimming for a clean, fresh look.
+        </p>
+        <strong>Price: ₦2,000</strong>
+    </div>
+
+</section>
+<section id="why-us">
+
+    <h2>Why Choose Frank's Barbershop?</h2>
+
+    <p>💈 Professional and quality haircuts</p>
+    <p>😊 Friendly and welcoming service</p>
+    <p>✨ Clean and comfortable environment</p>
+    <p>⭐ Customer satisfaction is our priority</p>
+
+</section>
+
+    <section id="contact">
+
+        <h2>Book Your Appointment</h2>
+        <p>Fill in the form below and we'll be ready to give you a fresh look.</p>
+<form onsubmit="event.preventDefault(); alert('Thank you! Your appointment request has been received.');">
+
+    <label>Your Name</label>
+    <input type="text" placeholder="Enter your name" required>
+
+    <label>Phone Number</label>
+    <input type="tel" placeholder="Enter your phone number" required>
+
+    <label>Service You Want</label>
+    <select required>
+        <option value="">Select a service</option>
+        <option>Haircut - ₦5,000</option>
+        <option>Hair Styling - ₦4,000</option>
+        <option>Grooming - ₦3,000</option>
+        <option>Beard Trim - ₦2,000</option>
+    </select>
+
+    <label>Appointment Date</label>
+    <input type="date" required>
+
+    <label>Appointment Time</label>
+    <input type="time" required>
+
+    <label>Special Request</label>
+    <textarea placeholder="Any special request?"></textarea>
+
+    <button type="submit">📅 Confirm Appointment</button>
+    
+<p>We'll review your request and contact you to confirm your appointment.</p>
+</form>
+
+  <p>
+    Ready for a fresh new look? Contact us to book your appointment.
+</p>
+
+<p>
+    📧 Email:
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=franksbarbershop@gmail.com">
+        franksbarbershop@gmail.com
+</a>
+</p>
+
+
+<p>📞 Phone: +234 801 234 5678</p>
+<p>
+    💬
+    <a href="https://wa.me/2348000000000" target="_blank">
+        Chat with us on WhatsApp
+    </a>
+</p>
+<p>📍 Location: Port Harcourt, Rivers State, Nigeria</p>
+<p>🕒 Opening Hours: Monday - Saturday, 8:00 AM - 7:00 PM</p>
+<p>
+    📞
+    <a href="tel:+2348012345678">
+        Call Frank's Barbershop
+    </a>
+</p>
+<button onclick="document.getElementById('contact').scrollIntoView()">
+    📅 Book Now
+</button>
+
+    </section>
+
+    <footer>
+    <h3>Frank's Barbershop</h3>
+
+  <p>Professional haircuts, styling, and grooming for a fresh look.</p>
+
+  <p>📧 Email: franksbarbershop@gmail.com</p>
+
+<p>📞 Phone: +234 801 234 5678</p>
+  
+<p>🌐 Follow us on social media</p>
+
+    <p>© 2026 Frank's Barbershop. All rights reserved.</p>
+</footer>
+
+    <script>
+
+        function sendMessage() {
+
+            let name =
+                document.getElementById("contactName").value.trim();
+
+            let email =
+                document.getElementById("contactEmail").value.trim();
+
+            let message =
+                document.getElementById("contactMessageBox").value.trim();
+
+            let result =
+                document.getElementById("result");
+
+            if (name === "" || email === "" || message === "") {
+
+                result.textContent =
+                    "Please fill in all the fields.";
+
+                return;
+            }
+
+            let subject =
+                "New Website Contact Message";
+
+            let body =
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n\n" +
+                "Message:\n" + message;
+
+            window.location.href =
+                "https://mail.google.com/mail/?view=cm&fs=1" +
+                "&to=franklinogemdi@gmail.com" +
+                "&su=" + encodeURIComponent(subject) +
+                "&body=" + encodeURIComponent(body);
+
+        }
+
+    </script>
+
+</body>
+
+</html>
